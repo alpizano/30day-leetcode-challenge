@@ -16,7 +16,7 @@ public class Solution {
 
         for(String s: table.keySet()) {
             if(table.get(s).equals(1)) {
-                ans = table.get(s);
+                ans = Integer.parseInt(s);
             }
         }
         return ans;
@@ -24,7 +24,9 @@ public class Solution {
 
     public static void main(String[] args) {
         int[] nums = new int[]{4,1,2,1,2};
+        int[] nums2 = new int[]{2,2,1};
+
         Solution sol = new Solution();
-        System.out.println(sol.singleNumber(nums));
+        System.out.println(sol.singleNumber(nums2));
     }
 }
