@@ -1,21 +1,31 @@
+import java.util.Hashtable;
+
 public class Solution2 {
 
     public boolean isHappy(int n) {
-        int ret =0;
         int sum = n;
         boolean happy = false;
+        Hashtable memory = new Hashtable();
 
         //int mod = n % 10;
         // int ans = 1 / 10;
         //  System.out.printf("%d and %s", mod,ans);
         while(sum != 1) {
             sum = recursSum(sum);
-            if(sum == 1) {
-                happy = true;
+            memory.put(sum,1);
+            if(memory.containsKey(sum)) {
+                System.out.println("not happy number, sum already seen in loop");
                 break;
             }
         }
-        return happy;
+
+        if(sum == 1) {
+             return happy = true;
+            }
+        else {
+            return happy;
+        }
+
     }
 
     public static int recursSum(int n) {
