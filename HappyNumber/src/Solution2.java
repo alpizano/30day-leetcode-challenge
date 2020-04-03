@@ -11,12 +11,12 @@ public class Solution2 {
         // int ans = 1 / 10;
         //  System.out.printf("%d and %s", mod,ans);
         while(sum != 1) {
-            sum = recursSum(sum);
-            memory.put(sum,1);
-            if(memory.containsKey(sum)) {
+            if (memory.containsKey(sum)) {
                 System.out.println("not happy number, sum already seen in loop");
                 break;
             }
+            memory.put(sum,1);
+            sum = recursSum(sum);
         }
 
         if(sum == 1) {
@@ -40,7 +40,6 @@ public class Solution2 {
                 concat = "+ " + concat ;
             }
             concat = num +"^2 " + concat;
-            //System.out.println(concat);
             sum = sum + (int)Math.pow(num,2);
             // increment to the left of number
             n = n /10;
@@ -48,7 +47,6 @@ public class Solution2 {
         }
         String ans = concat + "= " + sum ;
         System.out.println(ans);
-
         return sum;
     }
 
@@ -57,8 +55,7 @@ public class Solution2 {
         Solution2 sol = new Solution2();
         boolean ans;
 
-        ans = sol.isHappy(19);
+        ans = sol.isHappy(2);
         System.out.println(ans);
-//        System.out.println(sol.isHappy(19));
     }
 }
