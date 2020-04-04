@@ -3,6 +3,7 @@ public class Solution {
         int max_record = 0;
         int curr_max = 0;
         int sum = 0;
+        boolean record_init  = false;
 
         if(nums.length ==1) {
             return nums[0];
@@ -12,17 +13,18 @@ public class Solution {
             for (int i = 0; i < nums.length; i++) {
 
                 curr_max = nums[i];
-                sum = nums[i];
+                sum = 0;
 
-                for (int j = i + 1; j < nums.length; j++) {
+                for (int j = i; j < nums.length; j++) {
                     sum = sum + nums[j];
 
-                    if (sum > curr_max) {
+                    if (sum >= curr_max) {
                         curr_max = sum;
                     }
                 }
-                if (curr_max > max_record) {
+                if (curr_max > max_record || record_init == false) {
                     max_record = curr_max;
+                    record_init = true;
                 }
 
             }
@@ -39,6 +41,7 @@ public class Solution {
         Solution sol = new Solution();
 
         System.out.println(sol.maxSubArray(nums));
+        System.out.println(sol.maxSubArray(nums2));
 
     }
 }
