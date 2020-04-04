@@ -3,12 +3,13 @@ public class Solution {
         int placeholder = nums.length-1;
 
         for(int i=0; i<nums.length; i++) {
-            
+
         }
 
     }
 
     public static void main(String[] args) {
+        // sample nums array inputs
         int[] nums = new int[]{0,1,0,3,12};
         int[] nums2 = new int[]{1,3,12,0,0};
 
