@@ -1,4 +1,6 @@
+// brute force O(n^2) solution
 public class Solution {
+
     public int maxSubArray(int[] nums) {
         int max_record = 0;
         int curr_max = 0;
@@ -8,8 +10,9 @@ public class Solution {
         if(nums.length ==1) {
             return nums[0];
         }
+
         else {
-            // brute force O(n^2) solution
+            // using nested for loop
             for (int i = 0; i < nums.length; i++) {
 
                 curr_max = nums[i];
@@ -26,12 +29,9 @@ public class Solution {
                     max_record = curr_max;
                     record_init = true;
                 }
-
             }
         }
-
         return max_record;
-
     }
 
     public static void main(String[] args) {
@@ -42,6 +42,5 @@ public class Solution {
 
         System.out.println(sol.maxSubArray(nums));
         System.out.println(sol.maxSubArray(nums2));
-
     }
 }
