@@ -1,8 +1,15 @@
 public class Solution {
     public void moveZeroes(int[] nums) {
         int placeholder = nums.length-1;
+        int temp = 0;
 
         for(int i=0; i<nums.length; i++) {
+            if(nums[i] == 0) {
+                // store value in temp var before its erased
+                
+                //copy 0 to end
+                nums[placeholder] =
+            }
 
         }
 
