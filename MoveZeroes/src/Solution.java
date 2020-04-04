@@ -1,9 +1,10 @@
 public class Solution {
     public void moveZeroes(int[] nums) {
         int placeholder = nums.length-1;
+        int dynamic_length = nums.length-1;
         int temp = 0;
 
-        for(int i=0; i<nums.length; i++) {
+        for(int i=0; i<dynamic_length; i++) {
             if(nums[i] == 0) {
                 // store value in temp var before its erased
                 temp = nums[placeholder];
@@ -16,6 +17,7 @@ public class Solution {
 
                 //decrement placeholder
                 placeholder--;
+                dynamic_length--;
             }
 
         }
@@ -29,8 +31,8 @@ public class Solution {
 
         Solution sol = new Solution();
 
-        sol.moveZeroes(nums);
-        for(Integer i: nums) {
+        sol.moveZeroes(nums2);
+        for(Integer i: nums2) {
             System.out.print(i + " ");
         }
     }
