@@ -19,9 +19,7 @@ public class Solution {
                 placeholder--;
                 dynamic_length--;
             }
-
         }
-
     }
 
     public static void main(String[] args) {
