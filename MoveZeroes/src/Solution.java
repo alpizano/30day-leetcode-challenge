@@ -30,7 +30,10 @@ public class Solution {
 
         Solution sol = new Solution();
 
+        sol.moveZeroes(nums);
+        sol.moveZeroes(nums2);
         sol.moveZeroes(nums3);
+
         for(Integer i: nums) {
             System.out.print(i + " ");
         }
