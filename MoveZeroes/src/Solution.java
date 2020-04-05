@@ -12,6 +12,9 @@ public class Solution {
                     nums[i] = 0;
                     head++;
                 }
+//                if(i > nums.length-zeros_count) {
+//
+//                }
             }
         }
     }
