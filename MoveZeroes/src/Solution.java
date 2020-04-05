@@ -17,6 +17,12 @@ public class Solution {
 
     }
 
+    public static void print(int[] nums) {
+        for(Integer i: nums) {
+            System.out.print(i + " ");
+        }
+    }
+
 
     public static void main(String[] args) {
         // sample nums array inputs
@@ -39,28 +45,15 @@ public class Solution {
         sol.moveZeroes(nums6);
         sol.moveZeroes(nums7);
 
-        for(Integer i: nums) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
-        for(Integer i: nums2) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
-        for(Integer i: nums3) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
-        for(Integer i: nums4) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
-        for(Integer i: nums5) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
-        for(Integer i: nums7) {
-            System.out.print(i + " ");
-        }
+        print(nums);
+        print(nums2);
+        print(nums3);
+        print(nums4);
+        print(nums5);
+        print(nums6);
+        print(nums7);
+
+
+
     }
 }
