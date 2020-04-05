@@ -28,12 +28,17 @@ public class Solution {
         int[] nums = new int[]{0,1,0,3,12};
         int[] nums2 = new int[]{1,3,12,0,0};
         int[] nums3 = new int[]{0,1,0,3,12};
-        
+        int[] nums4 = new int[]{1]};
+
 
         Solution sol = new Solution();
 
         sol.moveZeroes(nums3);
+        sol.moveZeroes(nums4);
         for(Integer i: nums3) {
+            System.out.print(i + " ");
+        }
+        for(Integer i: nums4) {
             System.out.print(i + " ");
         }
     }
