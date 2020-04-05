@@ -25,6 +25,7 @@ public class Solution {
         int[] nums4 = new int[]{1};
         int[] nums5 = new int[]{0,5};
         int[] nums6 = new int[]{5,0};
+        int[] nums7 = new int[]{0,1,0};
 
 
         Solution sol = new Solution();
@@ -33,6 +34,8 @@ public class Solution {
         sol.moveZeroes(nums2);
         sol.moveZeroes(nums3);
         sol.moveZeroes(nums4);
+        sol.moveZeroes(nums5);
+        sol.moveZeroes(nums5);
         sol.moveZeroes(nums5);
 
         for(Integer i: nums) {
