@@ -33,7 +33,15 @@ public class Solution {
         sol.moveZeroes(nums3);
         sol.moveZeroes(nums4);
         sol.moveZeroes(nums5);
-        
+
+        for(Integer i: nums) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        for(Integer i: nums2) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
         for(Integer i: nums3) {
             System.out.print(i + " ");
         }
