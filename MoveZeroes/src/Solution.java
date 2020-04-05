@@ -5,11 +5,13 @@ public class Solution {
 
         if (nums.length > 1) {
             for (int i = 0; i < nums.length; i++) {
-                if (nums[i] == 0) {
-                    zeros_count++;
-                } else {
+                if(nums[i] ==0) {
+                    
+                }
+                if (nums[i] != 0) {
                     nums[head] = nums[i];
-                    nums[i] = 0;
+
+//                    nums[i] = 0;
                     head++;
                 }
 //                if(i > nums.length-zeros_count) {
