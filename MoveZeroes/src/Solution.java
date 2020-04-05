@@ -1,18 +1,24 @@
 public class Solution {
     public void moveZeroes(int[] nums) {
+        int zeros_count = 0;
         int placeholder = nums.length-1;
-        int dynamic_length = nums.length-1;
-        int temp = 0;
-        int ptr = 1;
+        int head = 0;
 
-        for(int i=0; i<dynamic_length; i++) {
-           for(int j=0; j<nums.length; j++) {
-               if(nums[j] == 0) {
-                   temp = nums[placeholder];
-                   
-               }
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 0) {
+                zeros_count++;
+            }
+            else {
+                nums[head] = nums[i];
+                nums[i] = 0;
+                head++;
+            }
+            if(i > nums.length-zeros_count) {
+                nums[i] = 0;
             }
         }
+
+
     }
 
     public static void main(String[] args) {
