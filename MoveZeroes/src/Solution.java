@@ -3,7 +3,6 @@ public class Solution {
         int zeros_count = 0;
         int head = 0;
 
-
             for (int i = 0; i < nums.length; i++) {
                 if (nums[i] == 0) {
                     zeros_count++;
@@ -15,7 +14,9 @@ public class Solution {
                     nums[i] = 0;
                 }
             }
+
     }
+
 
     public static void main(String[] args) {
         // sample nums array inputs
@@ -35,8 +36,8 @@ public class Solution {
         sol.moveZeroes(nums3);
         sol.moveZeroes(nums4);
         sol.moveZeroes(nums5);
-        sol.moveZeroes(nums5);
-        sol.moveZeroes(nums5);
+        sol.moveZeroes(nums6);
+        sol.moveZeroes(nums7);
 
         for(Integer i: nums) {
             System.out.print(i + " ");
@@ -55,6 +56,10 @@ public class Solution {
         }
         System.out.println();
         for(Integer i: nums5) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        for(Integer i: nums7) {
             System.out.print(i + " ");
         }
     }
