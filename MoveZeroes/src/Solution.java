@@ -3,21 +3,14 @@ public class Solution {
         int zeros_count = 0;
         int head = 0;
 
-        if (nums.length > 1) {
-            for (int i = 0; i < nums.length; i++) {
-                if(nums[i] ==0) {
-                    zeros_count++;
-                }
-                if (nums[i] != 0) {
-                    nums[head] = nums[i];
-                if(i >= nums.length - zeros_count) {
-                    nums[i] = 0;
 
+            for (int i = 0; i < nums.length; i++) {
+                if (nums[i] == 0) {
+                    zeros_count++;
+                    continue;
                 }
-                    head++;
-                }
+
             }
-        }
     }
 
     public static void main(String[] args) {
