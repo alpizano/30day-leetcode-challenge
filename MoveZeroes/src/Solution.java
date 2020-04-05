@@ -1,23 +1,16 @@
 public class Solution {
     public void moveZeroes(int[] nums) {
-        int placeholder = 1;
+        int placeholder = nums.length-1;
         int dynamic_length = nums.length-1;
         int temp = 0;
+        int ptr = 1;
 
         for(int i=0; i<dynamic_length; i++) {
-            if(nums[i] == 0) {
-                // store value in temp var before its erased
-                temp = nums[placeholder];
-
-                //copy 0 to right
-                nums[placeholder] = nums[i];
-
-                // copy temp to 0's position
-                nums[i] = temp;
-
-                //decrement placeholder
-                placeholder++;
-                dynamic_length--;
+           for(int j=0; j<nums.length; j++) {
+               if(nums[j] == 0) {
+                   temp = nums[placeholder];
+                   
+               }
             }
         }
     }
@@ -30,18 +23,7 @@ public class Solution {
 
         Solution sol = new Solution();
 
-        sol.moveZeroes(nums);
-        sol.moveZeroes(nums2);
         sol.moveZeroes(nums3);
-
-        for(Integer i: nums) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
-        for(Integer i: nums2) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
         for(Integer i: nums3) {
             System.out.print(i + " ");
         }
