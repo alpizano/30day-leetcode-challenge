@@ -6,17 +6,16 @@ public class Solution {
         if (nums.length > 1) {
             for (int i = 0; i < nums.length; i++) {
                 if(nums[i] ==0) {
-                    
+                    zeros_count++;
                 }
                 if (nums[i] != 0) {
                     nums[head] = nums[i];
+                if(i >= nums.length - zeros_count) {
+                    nums[i] = 0;
 
-//                    nums[i] = 0;
+                }
                     head++;
                 }
-//                if(i > nums.length-zeros_count) {
-//
-//                }
             }
         }
     }
