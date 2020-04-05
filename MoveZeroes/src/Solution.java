@@ -4,17 +4,19 @@ public class Solution {
         int placeholder = nums.length-1;
         int head = 0;
 
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == 0) {
-                zeros_count++;
-            }
-            else {
-                nums[head] = nums[i];
-                nums[i] = 0;
-                head++;
-            }
-            if(i > nums.length-zeros_count) {
-                nums[i] = 0;
+        if (nums.length > 1) {
+
+            for (int i = 0; i < nums.length; i++) {
+                if (nums[i] == 0) {
+                    zeros_count++;
+                } else {
+                    nums[head] = nums[i];
+                    nums[i] = 0;
+                    head++;
+                }
+                if (i > nums.length - zeros_count) {
+                    nums[i] = 0;
+                }
             }
         }
 
@@ -26,6 +28,7 @@ public class Solution {
         int[] nums = new int[]{0,1,0,3,12};
         int[] nums2 = new int[]{1,3,12,0,0};
         int[] nums3 = new int[]{0,1,0,3,12};
+        
 
         Solution sol = new Solution();
 
