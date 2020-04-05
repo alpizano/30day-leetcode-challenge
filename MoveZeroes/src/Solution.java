@@ -41,5 +41,9 @@ public class Solution {
         for(Integer i: nums4) {
             System.out.print(i + " ");
         }
+        System.out.println();
+        for(Integer i: nums5) {
+            System.out.print(i + " ");
+        }
     }
 }
