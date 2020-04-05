@@ -1,19 +1,13 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Solution {
     public void moveZeroes(int[] nums) {
         int zeros_count = 0;
         int head = 0;
+        ArrayList<Integer> arrayList = new ArrayList<>();
 
-            for (int i = 0; i < nums.length; i++) {
-                if (nums[i] == 0) {
-                    zeros_count++;
-                    continue;
-                }
-                nums[head] = nums[i];
-                head++;
-                if(i >= (nums.length-1)-zeros_count) {
-                    nums[i] = 0;
-                }
-            }
+        for(int )
 
     }
 
