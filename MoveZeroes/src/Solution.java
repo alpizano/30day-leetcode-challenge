@@ -1,11 +1,9 @@
 public class Solution {
     public void moveZeroes(int[] nums) {
         int zeros_count = 0;
-        int placeholder = nums.length-1;
         int head = 0;
 
         if (nums.length > 1) {
-
             for (int i = 0; i < nums.length; i++) {
                 if (nums[i] == 0) {
                     zeros_count++;
@@ -16,8 +14,6 @@ public class Solution {
                 }
             }
         }
-
-
     }
 
     public static void main(String[] args) {
@@ -32,8 +28,12 @@ public class Solution {
 
         Solution sol = new Solution();
 
+        sol.moveZeroes(nums);
+        sol.moveZeroes(nums2);
         sol.moveZeroes(nums3);
         sol.moveZeroes(nums4);
+        sol.moveZeroes(nums5);
+        
         for(Integer i: nums3) {
             System.out.print(i + " ");
         }
