@@ -1,13 +1,35 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class Solution {
+public class Solution2 {
+
+    private int[] answer;
+
     public void moveZeroes(int[] nums) {
         int zeros_count = 0;
         int head = 0;
-        ArrayList<Integer> arrayList = new ArrayList<>();
 
-        for(int )
+        // Additional data structure
+        int[] temp = new int[nums.length];
+
+        for(int i=0; i<nums.length; i++) {
+            if(nums[i] == 0) {
+                zeros_count++;
+                continue;
+            }
+            temp[head]=nums[i];
+            head++;
+        }
+
+        for(int j=nums.length-zeros_count; j<zeros_count; j++) {
+            temp[j] = 0;
+        }
+
+        // Copy elements from temp array to nums array
+       for(int k = 0; k< temp.length; k++) {
+           nums[k] = temp[k];
+       }
+
 
     }
 
@@ -29,7 +51,7 @@ public class Solution {
         int[] nums6 = new int[]{5,0};
         int[] nums7 = new int[]{0,1,0};
 
-        Solution sol = new Solution();
+        Solution2 sol = new Solution2();
 
         sol.moveZeroes(nums);
         sol.moveZeroes(nums2);
