@@ -27,7 +27,7 @@ public class Solution {
         int[] nums3 = new int[]{0,1,0,3,12};
         int[] nums4 = new int[]{1};
         int[] nums5 = new int[]{0,5};
-        
+        int[] nums6 = new int[]{5,0};
 
 
         Solution sol = new Solution();
