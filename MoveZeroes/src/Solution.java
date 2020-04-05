@@ -14,9 +14,6 @@ public class Solution {
                     nums[i] = 0;
                     head++;
                 }
-                if (i > nums.length - zeros_count) {
-                    nums[i] = 0;
-                }
             }
         }
 
@@ -28,7 +25,9 @@ public class Solution {
         int[] nums = new int[]{0,1,0,3,12};
         int[] nums2 = new int[]{1,3,12,0,0};
         int[] nums3 = new int[]{0,1,0,3,12};
-        int[] nums4 = new int[]{1]};
+        int[] nums4 = new int[]{1};
+        int[] nums5 = new int[]{0,5};
+        
 
 
         Solution sol = new Solution();
@@ -38,6 +37,7 @@ public class Solution {
         for(Integer i: nums3) {
             System.out.print(i + " ");
         }
+        System.out.println();
         for(Integer i: nums4) {
             System.out.print(i + " ");
         }
