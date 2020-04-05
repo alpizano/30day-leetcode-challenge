@@ -9,7 +9,11 @@ public class Solution {
                     zeros_count++;
                     continue;
                 }
-
+                nums[head] = nums[i];
+                head++;
+                if(i > (nums.length-1)-zeros_count) {
+                    nums[i] = 0;
+                }
             }
     }
 
