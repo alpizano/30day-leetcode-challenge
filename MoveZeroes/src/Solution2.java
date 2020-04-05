@@ -1,9 +1,4 @@
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-
 public class Solution2 {
-
-    private int[] answer;
 
     public void moveZeroes(int[] nums) {
         int zeros_count = 0;
@@ -13,14 +8,17 @@ public class Solution2 {
         int[] temp = new int[nums.length];
 
         for(int i=0; i<nums.length; i++) {
+            // count zeros
             if(nums[i] == 0) {
                 zeros_count++;
                 continue;
             }
+            // else write non-zero digit to temp array
             temp[head]=nums[i];
             head++;
         }
 
+        // pad end of temp array with zeros
         for(int j=nums.length-zeros_count; j<zeros_count; j++) {
             temp[j] = 0;
         }
@@ -29,8 +27,6 @@ public class Solution2 {
        for(int k = 0; k< temp.length; k++) {
            nums[k] = temp[k];
        }
-
-
     }
 
     public static void print(int[] nums) {
@@ -68,8 +64,5 @@ public class Solution2 {
         print(nums5);
         print(nums6);
         print(nums7);
-
-
-
     }
 }
