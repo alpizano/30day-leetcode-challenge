@@ -4,35 +4,21 @@ import java.util.Collections;
 import java.util.List;
 
 public class Solution {
-   //public List<List<String>> groupAnagrams(String[] strs) {
+   public List<List<String>> groupAnagrams(String[] strs) {
 
+       for(int i=0; i<strs.length; i++) {
+           for(int j=1; j<strs.length; j++) {
+               // Convert the String to a temporary char[] array so it can be sorted
+               char[] temp = strs[j].toCharArray();
 
+               // Sort the char[] array
+               Arrays.sort(temp);
 
-        // Convert the array to List so we can sort
-        //List<String> str_list = Arrays.asList(strs);
-//       List<>
-//
-//       for(int i=0; i<strs.length; i++) {
-//           for(int j=0; j< strs[j].length(); j++) {
-//               strs[j].charAt(j);
-//           }
-//       }
-//
-//        // Iterate
-//        for(String a: str_list) {
-//            for(String b: str_list) {
-////                if(a.equals(Collections.sort(b))){
-////
-////                }
-//
-//            }
- //       }
-
-
-
-
-
- //   }
+               // Do comparison
+               if(strs[i].toCharArray().equals(temp))
+           }
+       }
+   }
 
     public static void main(String[] args) {
         String[] input = new String[]{"eat","tea","tan","ate","nat","bat"};
