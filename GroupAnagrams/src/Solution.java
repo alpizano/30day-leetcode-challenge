@@ -1,41 +1,73 @@
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Solution {
    public List<List<String>> groupAnagrams(String[] strs) {
        boolean found_anagram = false;
         List<List<String>> big_list = new ArrayList();
+       Hashtable<String, Integer> memory = new Hashtable();
+       ArrayList<Integer> seen_indices = new ArrayList();
+       char[] temp = {};
+       char[] clone = {};
 
        for(int i=0; i<strs.length; i++) {
            // Create the list that will hold each anagram group
+            found_anagram = false;
+
            List<String> anagram_list = new ArrayList();
 
-           for(int j=1; j<strs.length; j++) {
+           clone = strs[i].toCharArray();
+           Arrays.sort(clone);
+
+           for(int j=i+1; j<strs.length; j++) {
+
                // Convert the String to a temporary char[] array so it can be sorted
-               char[] temp = strs[j].toCharArray();
+               temp = strs[j].toCharArray();
+
 
                // Sort the char[] array
                Arrays.sort(temp);
 
-               // Do comparison
-               if(Arrays.equals(strs[i].toCharArray(),temp)) {
-                    anagram_list.add(strs[j]);
+               if(!memory.containsKey(String.valueOf(clone))) {
+
+                       // Do comparison
+                       if (Arrays.equals(clone, temp)) {
+                           anagram_list.add(strs[j]);
+                       }
+
                }
+               else {
+                   found_anagram = true;
+                   break;
+               }
+
            }
            // Save the first item
-           if(found_anagram == true) {
+           // Store into memoryt
+           System.out.println("Placing " + String.valueOf(clone) + " into Hashtable");
+           memory.put(String.valueOf(clone),i);
+           if(found_anagram == false) {
                anagram_list.add(strs[i]);
+               big_list.add(anagram_list);
            }
+
+           System.out.println("Current list" + big_list);
        }
+
+//       for(String s: memory.keySet()) {
+//           System.out.println(s);
+//       }
+       return big_list;
    }
 
     public static void main(String[] args) {
+       Solution sol = new Solution();
         String[] input = new String[]{"eat","tea","tan","ate","nat","bat"};
+        List<List<String>> answer = new ArrayList();
 
-        System.out.println("Hello world");
+        answer = sol.groupAnagrams(input);
+
+        System.out.println(answer);
     }
 
 }
