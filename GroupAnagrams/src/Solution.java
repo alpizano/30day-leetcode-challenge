@@ -6,7 +6,11 @@ import java.util.List;
 public class Solution {
    public List<List<String>> groupAnagrams(String[] strs) {
 
+
        for(int i=0; i<strs.length; i++) {
+           // Create the list that will hold each anagram group
+           List<String> anagram_list = new ArrayList();
+
            for(int j=1; j<strs.length; j++) {
                // Convert the String to a temporary char[] array so it can be sorted
                char[] temp = strs[j].toCharArray();
@@ -15,7 +19,9 @@ public class Solution {
                Arrays.sort(temp);
 
                // Do comparison
-               if(strs[i].toCharArray().equals(temp))
+               if(Arrays.equals(strs[i].toCharArray(),temp) {
+
+               }
            }
        }
    }
