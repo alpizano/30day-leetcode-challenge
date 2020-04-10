@@ -1,6 +1,6 @@
-
 import java.util.*;
 
+// Correct Solution
 public class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
         // Initialize data structures

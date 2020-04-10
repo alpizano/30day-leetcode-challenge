@@ -19,6 +19,12 @@ public class Test {
         System.out.println(test3);
         System.out.println(test3[0].toCharArray());
         System.out.println(Arrays.equals(test3[0].toCharArray(), test3[2].toCharArray()));
+        String[] temp = test3[0].split("");
+        for(String s: temp) {
+            System.out.println(s);
+        }
+
+        System.out.println( String.join("",temp));
 
     }
 }
