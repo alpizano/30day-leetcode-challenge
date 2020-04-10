@@ -10,16 +10,21 @@ class ListNode {
     class Solution {
     public ListNode middleNode(ListNode head) {
             int count = 0;
+            int middle = 0;
             ListNode ans = new ListNode(0);
 
             for (ListNode curr = head; curr != null; curr = curr.next) {
                 count++;
             }
 
-            int middle = (count / 2) + 1;
-            count = 1;
+            if (count % 2 == 0) {
+                middle = (count/2) + 1;
+            }else {
+                middle = count / 2;
+            }
+            count = 0;
 
-            for (ListNode curr = head.next; curr != null; curr = curr.next) {
+            for (ListNode curr = head; curr != null; curr = curr.next) {
                 if (count == middle) {
                     ans = curr;
                 }
