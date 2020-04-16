@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Solution {
     HashSet<Integer> set;
-    int count;
+   static int count;
 
     public Solution() {
         set = new HashSet<>();
@@ -21,8 +21,14 @@ public class Solution {
         set.add(num);
     }
 
-    public boolean checkSet(int num) {
-        return set.contains(num);
+    public void checkSet(int num) {
+        if(set.contains(num)) {
+            count++;
+        }
+    }
+
+    public int getCount() {
+        return count;
     }
 
     public static void main(String[] args) {
@@ -32,9 +38,7 @@ public class Solution {
 
         arr.stream().forEach((x) -> {
             solution.insertSet(x);
-            if(solution.checkSet(x+1)) {
-
-            }
+            solution.checkSet(x+1));
         });
     }
 
