@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Solution {
     HashSet<Integer> set;
@@ -13,7 +14,10 @@ public class Solution {
     }
 
     public int countElements(int[] arr) {
-        List<Integer> list = new ArrayList(Arrays.asList(arr));
+        // Need to cast int[] to List<Integer>. I'll use Java8 API
+        List<Integer> list = Arrays.stream(arr)
+                .boxed()
+                .collect(Collectors.toList());
 
         list.stream().forEach((x) -> insertSet(x));
         list.stream().forEach((x) -> checkSet(x+1));
@@ -49,7 +53,7 @@ public class Solution {
 //        int answer = solution.getCount();
 //        System.out.println(answer);
 
-        solution.countElements(int_arr);
+        System.out.println(solution.countElements(int_arr));
     }
 
 }
