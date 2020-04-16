@@ -35,11 +35,16 @@ public class Solution {
         Solution solution = new Solution();
 
         List<Integer> arr = new ArrayList(Arrays.asList(1,1,3,3,5,5,7,7));
+        List<Integer> arr2 = new ArrayList(Arrays.asList(1,2,3));
 
-        arr.stream().forEach((x) -> {
+
+        arr2.stream().forEach((x) -> {
             solution.insertSet(x);
-            solution.checkSet(x+1));
+            solution.checkSet(x+1);
         });
+
+        int answer = solution.getCount();
+        System.out.println(answer);
     }
 
 }
