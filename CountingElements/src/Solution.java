@@ -26,7 +26,6 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println("Hello world");
         Solution solution = new Solution();
 
         List<Integer> arr = new ArrayList(Arrays.asList(1,1,3,3,5,5,7,7));
