@@ -1,14 +1,9 @@
 public class MinStack {
     ListNode head;
-    ListNode next;
     int val;
     int min;
 
     public MinStack() {
-        //head = new ListNode(0);
-        this.val = val;
-        this.next = next;
-        min = 0;
     }
 
     public void push(int x) {
@@ -28,8 +23,19 @@ public class MinStack {
         return 0;
     }
 
+    public void print() {
+        for(ListNode cursor=head; cursor != null; cursor=cursor.next) {
+            System.out.println(cursor.val);
+        }
+    }
+
 
     public static void main(String[] args) {
-        System.out.println("hello world");
+        MinStack minStack = new MinStack();
+        minStack.push(-2);
+        minStack.push(0);
+        minStack.push(-3);
+        System.out.println(minStack.top());
+
     }
 }
