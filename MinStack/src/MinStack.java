@@ -25,7 +25,7 @@ public class MinStack {
 
     public void print() {
         for(ListNode cursor=head; cursor != null; cursor=cursor.next) {
-            System.out.println(cursor.val);
+            System.out.print(cursor.val + " ");
         }
     }
 
@@ -36,6 +36,6 @@ public class MinStack {
         minStack.push(0);
         minStack.push(-3);
         System.out.println(minStack.top());
-
+        minStack.print();
     }
 }
