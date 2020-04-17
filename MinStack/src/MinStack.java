@@ -1,16 +1,18 @@
 public class MinStack {
-    ListNode node;
+    ListNode head;
     ListNode top;
+    int val;
     int min;
 
-    public MinStack() {
-        node = new ListNode(0);
+    public MinStack(int val, ListNode next) {
+        //head = new ListNode(0);
+        this.val = val;
         min = 0;
-        top = node;
+        top = head;
     }
 
     public void push(int x) {
-
+        head.next.val = x;
     }
 
     public void pop() {
