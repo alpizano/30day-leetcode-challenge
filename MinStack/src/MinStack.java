@@ -1,18 +1,23 @@
 public class MinStack {
     ListNode head;
-    int val;
     int min;
 
     public MinStack() {
+        min =0;
     }
 
     public void push(int x) {
+        // track min value
+        if(x < min) {
+            min = x;
+        }
+
         // Pushes val in-front,
         head = new ListNode(x,head);
     }
 
     public void pop() {
-            head = head.next;
+        head = head.next;
     }
 
     public int top() {
@@ -20,7 +25,7 @@ public class MinStack {
     }
 
     public int getMin() {
-        return 0;
+        return this.min;
     }
 
     public void print() {
