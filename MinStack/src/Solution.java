@@ -1,5 +1,6 @@
 public class Solution {
-    
+    int val;
+    S
     public MinStack() {
 
     }
