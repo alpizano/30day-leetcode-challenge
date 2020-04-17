@@ -40,7 +40,11 @@ public class MinStack {
         minStack.push(-2);
         minStack.push(0);
         minStack.push(-3);
+        System.out.println(minStack.getMin());
+        minStack.pop();
         System.out.println(minStack.top());
+        minStack.getMin();
+
         minStack.print();
     }
 }
