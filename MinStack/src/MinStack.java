@@ -1,3 +1,7 @@
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+
 class ListNode {
     int val;
     ListNode next;
@@ -10,17 +14,19 @@ class ListNode {
 
 class MinStack {
     ListNode head;
+    List<Integer> valList;
     int min;
 
     public MinStack() {
+        valList = new LinkedList<>();
         min =0;
     }
 
     public void push(int x) {
-        // track min value
-        if(x < min) {
-            min = x;
-        }
+        // Add new value to values list
+        valList.add(x);
+        // Sort the values to obtain minimum
+        Collections.sort(valList);
 
         // Pushes val in-front,
         head = new ListNode(x,head);
