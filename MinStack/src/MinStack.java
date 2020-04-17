@@ -1,8 +1,12 @@
-public class Solution {
-    int val;
-    S
-    public MinStack() {
+public class MinStack {
+    ListNode node;
+    ListNode top;
+    int min;
 
+    public MinStack() {
+        node = new ListNode(0);
+        min = 0;
+        top = node;
     }
 
     public void push(int x) {
@@ -14,14 +18,14 @@ public class Solution {
     }
 
     public int top() {
-
+        return 0;
     }
 
     public int getMin() {
-
+        return 0;
     }
 
-}
+
     public static void main(String[] args) {
         System.out.println("hello world");
     }
