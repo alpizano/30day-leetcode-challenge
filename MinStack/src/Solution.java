@@ -2,15 +2,15 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-//class ListNode {
-//    int val;
-//    ListNode next;
-//
-//    public ListNode(int val, ListNode next) {
-//        this.val = val;
-//        this.next = next;
-//    }
-//}
+class ListNode {
+    int val;
+    ListNode next;
+
+    public ListNode(int val, ListNode next) {
+        this.val = val;
+        this.next = next;
+    }
+}
 
 class MinStack {
     ListNode head;
