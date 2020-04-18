@@ -16,8 +16,12 @@ class Solution {
     }
 
     public int getLeftmostPath(TreeNode root) {
-        TreeNode cursor = root;
+        TreeNode cursor = root.left;
         int length= 0;
+
+        if(cursor == null) {
+            return 0;
+        }
 
         while(cursor != null) {
             if(cursor.left == null) {
@@ -29,6 +33,7 @@ class Solution {
                 length++;
             }
         }
+        return length;
     }
 
 
@@ -47,7 +52,11 @@ class Solution {
         root.left.left = new TreeNode(4);
         root.left.right = new TreeNode(5);
 
-        System.out.println(root.val);
+        Solution sol = new Solution();
+        
+
+        System.out.println(sol.getLeftmostPath(root));
+//        System.out.println(root.left.val);
     }
 
 }
