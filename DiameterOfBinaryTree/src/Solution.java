@@ -14,7 +14,15 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println("Hello World");
+        //            1
+        //           / \
+        //          2   3
+        //         / \
+        //        4   5
+
+        TreeNode tree = new TreeNode(1);
+        tree.left = new TreeNode(2);
+        tree.right = new TreeNode(3);
     }
 
 }
