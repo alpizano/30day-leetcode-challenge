@@ -50,7 +50,11 @@ class Solution {
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
         root.right = new TreeNode(3);
+        root.right.right = new TreeNode(69);
         root.left.left = new TreeNode(4);
+        root.left.left.left  = new TreeNode(8);
+        root.left.left.left.right = new TreeNode(33);
+        root.left.left.left.left  = new TreeNode(9);
         root.left.right = new TreeNode(5);
 
         //            14
@@ -60,7 +64,8 @@ class Solution {
         //       9   53
         //        \
         //         13
-        sol.diameterOfBinaryTree(root);
+
+        System.out.println(sol.diameterOfBinaryTree(root));
 
         TreeNode root2 = new TreeNode(14);
         root2.left = new TreeNode(17);
