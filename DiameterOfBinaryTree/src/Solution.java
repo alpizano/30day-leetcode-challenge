@@ -14,31 +14,23 @@ class TreeNode {
  }
 
 class Solution {
-    List<Integer> adjList = new ArrayList<>();
-    //List<String> marked = new ArrayList<>();
-    HashSet marked = new HashSet();
+    int ans;
 
     public int diameterOfBinaryTree(TreeNode root) {
-
-
-        return 0;
+        ans = 1;
+        depth(root);
+        return ans -1;
     }
 
-  public void dfs(TreeNode node) {
-        // Add visited node to marked HashSet
-        this.marked.add(node.val);
+  public int depth(TreeNode node) {
+      if(node == null) {
+          return 0;
+      }
+      int L = depth(node.left);
+      int R = depth(node.right);
+      ans = Math.max(ans, L+R+1);
 
-        // Create an adjacent list for each node
-        adjList.add(node.left.val);
-        adjList.add(node.right.val);
-
-        if(!marked.contains(node.val)) {
-            for(Integer val: adjList) {
-                dfs(val)
-            }
-        }
-
-
+      return Math.max(L,R)+1;
 
   }
 
@@ -68,7 +60,7 @@ class Solution {
         //       9   53
         //        \
         //         13
-
+        sol.diameterOfBinaryTree(root);
 
         TreeNode root2 = new TreeNode(14);
         root2.left = new TreeNode(17);
@@ -76,10 +68,6 @@ class Solution {
         root2.left.left = new TreeNode(9);
         root2.left.right = new TreeNode(53);
         root2.left.left.right = new TreeNode(13);
-
-        sol.preOrder(root2);
-        System.out.println("---");
-        System.out.println(sol.depth);
 
         //System.out.println(sol.getLeftmostPath(root));
 //        System.out.println(root.left.val);
